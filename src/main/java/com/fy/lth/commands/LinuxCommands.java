@@ -16,7 +16,7 @@ import com.fy.lth.common.util.TableUtil;
 @ShellCommandGroup(value = "linux")
 public class LinuxCommands {
 
-    @ShellMethod(value = "grepTable 导航", key = {"grepTable"})
+    @ShellMethod(value = "grepTable 导航", key = {"grep"})
     public Table grepTable() {
         TableModelBuilder builder = TableUtil.create(null);
         builder.addRow().addValue("grep -v 'leo' a.txt").addValue("搜索文件中不包含 leo 字符串的行");
@@ -27,7 +27,7 @@ public class LinuxCommands {
         return TableUtil.build(builder);
     }
 
-    @ShellMethod(value = "findTable 导航", key = {"findTable"})
+    @ShellMethod(value = "findTable 导航", key = {"find"})
     public Table findTable() {
         TableModelBuilder builder = TableUtil.create(null);
         builder.addRow().addValue("find / -name '*.txt' ").addValue("查找根目录下所有以.txt结尾的文件");
@@ -36,7 +36,7 @@ public class LinuxCommands {
         return TableUtil.build(builder);
     }
 
-    @ShellMethod(value = "tailTable 导航", key = {"tailTable"})
+    @ShellMethod(value = "tailTable 导航", key = {"tail"})
     public Table tailTable() {
         TableModelBuilder builder = TableUtil.create(null);
         builder.addRow().addValue("tail a.txt").addValue("查看文件内容，和cat效果一样");
@@ -46,7 +46,7 @@ public class LinuxCommands {
         return TableUtil.build(builder);
     }
 
-    @ShellMethod(value = "headTable 导航", key = {"headTable"})
+    @ShellMethod(value = "headTable 导航", key = {"head"})
     public Table headTable() {
         TableModelBuilder builder = TableUtil.create(null);
         builder.addRow().addValue("head -n 2 a.txt").addValue("显示文件的前两行");
@@ -54,7 +54,7 @@ public class LinuxCommands {
     }
 
 
-    @ShellMethod(value = "closeWaitTable 导航", key = {"closeWaitTable"})
+    @ShellMethod(value = "closeWaitTable 导航", key = {"closeWait"})
     public Table closeWaitTable() {
         TableModelBuilder builder = TableUtil.create(null);
         builder.addRow().addValue("netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'")
@@ -63,7 +63,7 @@ public class LinuxCommands {
     }
 
 
-    @ShellMethod(value = "scoketStatusTable 导航", key = {"scoketStatusTable"})
+    @ShellMethod(value = "scoketStatusTable 导航", key = {"scoketStatus"})
     public Table scoketStatusTable() {
         TableModelBuilder builder = TableUtil.create(null);
         builder.addRow().addValue("CLOSED").addValue("没有使用这个套接字[netstat 无法显示closed状态]");
@@ -80,7 +80,7 @@ public class LinuxCommands {
         return TableUtil.build(builder);
     }
 
-    @ShellMethod(value = "crontabTable(定时任务)", key = {"corntabTable"})
+    @ShellMethod(value = "crontabTable(定时任务)", key = {"corntab"})
     public Table crontabTable() {
         TableModelBuilder builder = TableUtil.create(null);
         builder.addRow().addValue("crontab -l").addValue("查看当前计划任务");

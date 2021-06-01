@@ -14,7 +14,7 @@ import org.springframework.shell.standard.ShellMethod;
 @ShellCommandGroup(value = "ip")
 public class IpCommand {
 
-    @ShellMethod(value = "获取本机ip地址信息")
+    @ShellMethod(value = "获取本机ip地址信息",key = "ip")
     public String ip() {
         String ip = IpUtils.getIpAddress();
         String formatStr = String.format(ClipboardUtils.CLIPBOARD_TEXT,ip+" ");

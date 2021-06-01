@@ -16,7 +16,7 @@ import com.fy.lth.common.util.TableUtil;
 @ShellCommandGroup(value = "maven")
 public class MavenCommands {
 
-    @ShellMethod(value = "mvnTable" ,key = {"mvnTable"})
+    @ShellMethod(value = "mvn" ,key = {"mvn"})
     public Table mvnTable(){
         TableModelBuilder tableModelBuilder = TableUtil.create(null);
         tableModelBuilder.addRow().addValue("mvn package -Dmaven.test.skip=true").addValue("不但跳过单元测试的运行，也跳过测试代码的编译。");
