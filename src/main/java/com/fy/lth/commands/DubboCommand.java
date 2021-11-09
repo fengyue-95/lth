@@ -20,7 +20,7 @@ import org.springframework.shell.table.TableModelBuilder;
 @ShellCommandGroup(value = "dubbo")
 public class DubboCommand {
 
-    @ShellMethod(value = "dubbo本地查看配置", key = {"dubbo_ls"})
+    @ShellMethod(value = "dubbo本地查看配置", key = {"dubbo"})
     public Table dubbo_ls() {
         TableModelBuilder builder = TableUtil.create(null);
         builder.addRow().addValue("telnet localhost 20880").addValue("查看本机dubbo服务");

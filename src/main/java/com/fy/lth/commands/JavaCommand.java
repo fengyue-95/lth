@@ -15,7 +15,7 @@ import org.springframework.shell.table.TableModelBuilder;
 @ShellCommandGroup(value = "java")
 public class JavaCommand {
 
-    @ShellMethod(value = "java_class字节码相关" ,key = {"java_class"})
+    @ShellMethod(value = "java_class字节码相关" ,key = {"java"})
     public Table java_class(){
         TableModelBuilder tableModelBuilder = TableUtil.create(null);
         tableModelBuilder.addRow().addValue("javap -c -s -v -l SynchronizedDemo.class").addValue("查看字节码文件");
