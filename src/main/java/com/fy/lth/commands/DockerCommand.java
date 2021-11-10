@@ -29,8 +29,8 @@ public class DockerCommand {
         builder.addRow().addValue("docker exec -it paka_mysql sh -c \"mysql -uroot -pZD71SEx82jg=\" ").addValue("进入mysql容器");
         builder.addRow().addValue("docker logs | grep \"XXX\" paka").addValue("过滤容器的日志");
         builder.addRow().addValue("docker logs paka | grep -A n  \"XXX\"").addValue("过滤容器的日志并显示匹配后和它后面的n行。");
-        builder.addRow().addValue("docker logs paka | grep -A n  \"XXX\"").addValue("过滤容器的日志并显示匹配后和它前面的n行。");
-        builder.addRow().addValue("docker logs paka | grep -A n  \"XXX\"").addValue("过滤容器的日志并显示匹配后和它前后的n行。");
+        builder.addRow().addValue("docker logs paka | grep -B n  \"XXX\"").addValue("过滤容器的日志并显示匹配后和它前面的n行。");
+        builder.addRow().addValue("docker logs paka | grep -C n  \"XXX\"").addValue("过滤容器的日志并显示匹配后和它前后的n行。");
 
         TableModel tableModel = builder.build();
         TableBuilder tableBuilder = new TableBuilder(tableModel);
