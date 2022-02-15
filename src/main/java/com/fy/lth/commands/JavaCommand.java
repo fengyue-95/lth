@@ -19,6 +19,7 @@ public class JavaCommand {
     public Table java_class(){
         TableModelBuilder tableModelBuilder = TableUtil.create(null);
         tableModelBuilder.addRow().addValue("javap -c -s -v -l SynchronizedDemo.class").addValue("查看字节码文件");
+        tableModelBuilder.addRow().addValue("javap  -verbose SynchronizedDemo.class").addValue("查看字节码文件");
         return TableUtil.build(tableModelBuilder);
     }
 }
