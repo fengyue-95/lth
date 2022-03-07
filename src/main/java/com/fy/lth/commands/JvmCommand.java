@@ -18,6 +18,7 @@ public class JvmCommand {
         tableModelBuilder.addRow().addValue("jps -v").addValue("查看项目启动参数");
         tableModelBuilder.addRow().addValue("System.gc()").addValue("手动gc");
         tableModelBuilder.addRow().addValue("-verbose:gc").addValue("打印gc信息");
+        tableModelBuilder.addRow().addValue("-verbose:class").addValue("打印类加载");
         return TableUtil.build(tableModelBuilder);
     }
 
